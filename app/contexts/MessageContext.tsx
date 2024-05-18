@@ -18,7 +18,7 @@ export const MessageListContextProvider = ({ children } : MessageListContextProv
 
     useEffect(() => {
         if (localStorage.getItem("Messages") !== null) {
-            setUserMessages(JSON.parse(localStorage.getItem('Messages')))
+            setUserMessages(JSON.parse(localStorage.getItem('Messages') || '{}'))
         }
     }, [])
     
