@@ -1,14 +1,12 @@
 "use client"
 import Image from "next/image";
-import { useContext, useEffect, useRef } from "react";
+import { useContext } from "react";
 import { MessagesListContext } from "./contexts/MessageContext";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 
 export default function Home() {
   const messagesListContext = useContext(MessagesListContext)
-
-  const currentList = useRef(messagesListContext.userMessages)
 
   return (
     <section className="grow mx-4 sm:mx-20 lg:mx-36 mt-12">
@@ -36,7 +34,7 @@ export default function Home() {
         }) :
         <div className="flex flex-col items-center">
           <Image src="/assets/symbol.png" alt="Monta AI" width={130} height={130} />
-          <h2 className="text-2xl md:text-4xl font-bold mt-5">How can I help you today ?</h2>
+          <h2 className="text-2xl md:text-4xl text-indigo-monta font-bold mt-5">How can I help you today ?</h2>
         </div>
       }
     </section>
