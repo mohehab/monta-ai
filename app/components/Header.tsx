@@ -20,7 +20,7 @@ export default function Header() {
         {
           messagesContext.userMessages.length > 0 &&
             <div>
-              <FontAwesomeIcon title="Clear History" icon={faTrash} onClick={() => clearHistory()} className='cursor-pointer' />
+              <FontAwesomeIcon title="Clear History" icon={faTrash} onClick={() => clearHistory()} className='cursor-pointer text-indigo-monta' />
             </div>
         }
 
